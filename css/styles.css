@@ -11,16 +11,7 @@
     --color-icons-items: #AFB1B8;
     --color-form-bcgbutton: #188CE8;
 }
-/*html {
-    box-sizing: border-box;
-}
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-*/
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
     padding: 0;
@@ -28,17 +19,14 @@ h1,h2,h3,h4,h5,h6,p {
 a {
     text-decoration: none;
 }
-
 li {
     display: inline-block;
 }
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-
 ul {
     list-style: none;
     margin: 0;
@@ -53,8 +41,8 @@ body {
     background-color: var(--background-color);
     color: var(--page-text-color);
 }
-/*Утіліти*/
 
+/*Утіліти*/
 .list {
     margin: 0;
     padding: 0;
@@ -71,8 +59,19 @@ body {
     padding-right: 15px;
 }
 
-/*Header*/
+/*hide title*/
+.section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
 
+/*Header*/
 .header-nav__logo {
     width: 145px;
     margin-left: 0;
@@ -88,7 +87,6 @@ body {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
-
 .header-nav__web {
     color: var(--accent-text-color);
 }
@@ -1107,18 +1105,6 @@ margin-left: 50px;
     letter-spacing: 0.03em;
     color: var(--background-color);
 }
-
-/*hide title*/
-.section-title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
-}
 .container-list {
     display: flex;
     flex-wrap: wrap;
@@ -1129,12 +1115,3 @@ margin-left: 50px;
 .container-item:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
-
-/**.container-item:not(:nth-child(3n)){
-    margin-right: 30px;
-}
-.container-item:not(:nth-last-child(-n+3)) {
-margin-bottom: 30px;
-}*/
-
-/*section*/
