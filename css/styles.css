@@ -769,17 +769,17 @@ margin-left: 50px;
 }
 
 /*footer*/
-.contacts-all {
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--background-color-main);
 }
-.contacts {
+.footer-contacts {
     display: flex;
     align-items: baseline;
 }
 
-.contacts-logo {
+.contacts-box__logo {
     display: inline-block;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -793,10 +793,14 @@ margin-left: 50px;
     letter-spacing: 0.03em;
     color: var(--background-color); 
 }
-.contacts-logo > span{
+.contacts-box__web {
     color: var(--accent-text-color);
 }
-.contacts-block .contacts-list {
+.contacts__menu {
+    display: inline-block;
+    width: 231px;
+}
+.contacts__list {
     /*display: block;*/
     font-style: normal;
     font-weight: 400;
@@ -805,22 +809,18 @@ margin-left: 50px;
     letter-spacing: 0.03em;   
 }
 
-.contacts-menu {
-    display: inline-block;
-    width: 231px;
-}
-.contacts-item:not(:last-child) {
+.contacts__item:not(:last-child) {
     margin-bottom: 9px;
 }
-.contacts-mail,
-.contacts-phone {
+.contacts__mail,
+.contacts__phone {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     color: rgba(255, 255, 255, 0.6);
 }
-.contacts-address {
+.contacts__address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -828,20 +828,20 @@ margin-left: 50px;
     color: var(--background-color);
 }
 
-.contacts-list .contacts-address:hover,
-.contacts-list .contacts-address:focus {
+.contacts__address:hover,
+.contacts__address:focus {
     color: var(--accent-text-color);
 }
-.contacts-list .contacts-mail:hover,
-.contacts-list .contacts-mail:focus {
+.contacts__mail:hover,
+.contacts__mail:focus {
     color: var(--accent-text-color);
 }
 
-.contacts-list .contacts-phone:hover,
-.contacts-list .contacts-phone:focus {
+.contacts__phone:hover,
+.contacts__phone:focus {
     color: var(--accent-text-color);
 }
-.contacts-list > li {
+.contacts__item {
     display: block;
 }
 /*comming links footer*/
@@ -851,7 +851,7 @@ margin-left: 50px;
     margin-left: 70px;
     /*width: 300px;*/
 }
-.comming-subtitle {
+.comming__subtitle {
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
@@ -861,12 +861,12 @@ margin-left: 50px;
         letter-spacing: 0.03em;
         color: var(--background-color);
 }
-.comming-social-menu {
+.social-box {
     display: flex;
     align-items: center;
 }
 
-.comming-social-link {
+.social-box__link {
     display: block;
     width: 44px;
     height: 44px;
@@ -877,11 +877,11 @@ margin-left: 50px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comming-social-item:not(:last-child) {
+.social-box__item:not(:last-child) {
     margin-right: 10px;
 }
-.comming-social-link:hover,
-.comming-social-link:focus {
+.social-box__link:hover,
+.social-box__link:focus {
     background-color: var(--accent-text-color);
 }
 
@@ -893,47 +893,14 @@ margin-left: 50px;
     align-items: center;
     justify-content: center;
 }
-
-.instagram1 svg {
+.social-box__icon {
     width: 20px;
     height: 20px;
     fill: var(--background-color);
 }
-.twitter1 svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--background-color);
-}
-.facebook1 svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--background-color);
-}
-.linkedin1 svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--background-color);
-}
-.linkedin1:hover svg,
-.linkedin1:focus svg {
+.social-box__link:hover,
+.social-box__link:focus {
     color: var(--background-color);
-}
-.linkedin1:hover svg,
-.linkedin1:focus svg {
-    fill: var(--background-color);
-}
-.linkedin1:hover svg,
-.linkedin1:focus svg {
-    fill: var(--background-color);
-}
-.linkedin1:hover svg,
-.linkedin1:focus svg {
-    fill: var(--background-color);
-}
-.comming-list {
-    display: inline-flex;
-    margin-left: auto;
-    margin-right: auto;
 }
 /*subscribe footer*/
 .subscribe {
@@ -941,23 +908,23 @@ margin-left: 50px;
     margin: 0;
     margin-left: auto;
 }
-.subscribe-title {
+.subscribe__title {
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--background-color);
 }
-.subscribe-field {
+.subscribe__field {
     margin: 0;
     padding: 0;
     position: relative;
     display: flex;
     margin-top: 20px;
 }
-.subscribe-input {
+.subscribe__input {
     width: 358px;
-    height: 50px;
+    min-height: 50px;
     margin-right: 12px;
     color: rgba(255, 255, 255, 0.6);
     padding-left: 16px;
@@ -971,23 +938,15 @@ margin-left: 50px;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe-input:hover,
-.subscribe-input:focus {
+.subscribe__input:hover,
+.subscribe__input:focus {
     border-color: var(--accent-text-color);
 }
-.subscribe-input::placeholder {
+.subscribe__input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
-/*.subscribe-label {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.6);
-
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-.subscribe-submit {
+.subscribe__submit {
+    margin: 0;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.875;
@@ -1010,24 +969,12 @@ margin-left: 50px;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe-submit:hover,
-.subscribe-submit:focus {
+.subscribe__submit:hover,
+.subscribe__submit:focus {
     background-color: var(--accent-text-color);
     border-color: var(--accent-text-color);
 }
-/*background-color: var(--accent-text-color);
-    border: 1px solid var(--accent-text-color);
-    border-radius: 4px;
-*/
-.subscribe-text {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.875;
-    letter-spacing: 0.06em;
-
-    margin-left: 29px;
-}
-.subscribe-icon {
+.subscribe_icon {
     margin-left: 10px;
 }
 /*Portfolio CSS*/
