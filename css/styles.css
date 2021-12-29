@@ -710,7 +710,7 @@ margin-left: 50px;
 }
 /*clients*/
 
-.clients-title {
+.clients__title {
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
@@ -719,17 +719,17 @@ margin-left: 50px;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 }
-.clients-list {
+.clients__list {
     display: flex;
     align-items: center;
     justify-content: center;
    /* background-color: rgb(146, 130, 238);*/
 }
 
-.clients-item:not(:first-child) {
+.clients__item:not(:first-child) {
     margin-left: 30px;
 }
-.clients-link {
+.clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -748,53 +748,26 @@ margin-left: 50px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
     border-color: var(--accent-text-color);
+    fill: var(--accent-text-color);
 }
 
-.clients-logo-icon {
+.clients-logo__icon {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .client1,
 .client2,
 .client3,
 .client4,
 .client5,
-.client6 svg {
+.client6 {
     fill: var(--color-icons-items);
 }
-.client1:hover svg,
-.client1:focus svg {
-    
-    fill: var(--accent-text-color);
-}
-.client2:hover svg,
-.client2:focus svg {
-    
-    fill: var(--accent-text-color);
-}
-.client3:hover svg,
-.client3:focus svg {
-    
-    fill: var(--accent-text-color);
-}
-.client4:hover svg,
-.client4:focus svg {
-    
-    fill: var(--accent-text-color);
-}
-.client5:hover svg,
-.client5:focus svg {
-    fill: var(--accent-text-color);
-}
-.client6:hover svg,
-.client6:focus svg {
-    fill: var(--accent-text-color);
-}
+
 /*footer*/
 .contacts-all {
     padding-top: 60px;
