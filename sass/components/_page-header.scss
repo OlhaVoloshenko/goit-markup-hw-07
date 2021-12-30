@@ -35,7 +35,7 @@
     letter-spacing: 0.02em;
     color: $primary-text-color;
 
-    transition-property: $transprop;
+    transition-property: $transcolor;
     transition-duration: $transdur;
     transition-timing-function: $transtfunction;
 }
@@ -80,7 +80,7 @@
     letter-spacing: 0.02em;
     color: $page-text-color;
 
-    transition-property: $transprop;
+    transition-property: $transcolor;
     transition-duration: $transdur;
     transition-timing-function: $transtfunction;
     

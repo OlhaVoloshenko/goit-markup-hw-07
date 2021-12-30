@@ -17,8 +17,8 @@
 .main__menu {
     display: block;
     text-align: center;
-    padding-bottom: 200px;
-    padding-top: 200px;
+    padding-bottom: 250px;
+    padding-top: 250px;
 }
 .main__title {
     margin-bottom: 30px;
@@ -60,7 +60,7 @@
     z-index: 1;
 
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity $transdur $transtfunction;
 }
 .backdrop.backdrop__is-hidden {
     opacity: 0;
@@ -88,7 +88,7 @@
     opacity: 1;
 
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $transdur $transtfunction;
 }
 .modal__title {
     font-size: 20px;
@@ -100,10 +100,11 @@
 }
 .form__close-icon {
     position: absolute;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form__close:hover .form__close-icon {
-    fill: $accent-text-color;
+    transition: $transfill $transdur $transtfunction;
+    
+    .form__close:hover & {
+        fill: $accent-text-color;
+        }
 }
 .form__close {
     position: absolute;
@@ -138,7 +139,7 @@
     
     position: relative;
 }
-.form__input, .form__message {
+.form__input {
     outline: none;
     width: 100%;
     height: 40px;
@@ -146,24 +147,39 @@
     border-radius: 4px;
     margin-top: 4px;
     text-indent: 42px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form__input:focus {
-    border: 1px solid $accent-text-color;
-    border-radius: 4px;
+    transition: border $transdur $transtfunction;
+
+    &:focus {
+        border: 1px solid $accent-text-color;
+        border-radius: 4px;
+    }
+    &:hover {
+        border: 1px solid $accent-text-color;
+        border-radius: 4px;
+    }
 }
 .form__message {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    text-indent: 42px;
+    transition: border $transdur $transtfunction;
+
     font-family: inherit;
     height: 120px;
     resize: none;
     padding: 12px 16px;
     text-indent: 0;
-}
-.form__message::placeholder {
-    line-height: 1.14;
-    letter-spacing: 0.01em;
 
-    color: rgba(117, 117, 117, 0.5);
+    &::placeholder {
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
 .form__icon {
     display: block;
@@ -174,11 +190,18 @@
     top: 50%;
     left: 12px;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $transdur $transtfunction;
+
+    .form__input:focus + & {
+        fill: $accent-text-color;
+    }
+    .form__input:hover + & {
+        fill: $accent-text-color;
+    }
 }
-.form__input:focus + svg {
+/*.form__input:focus + svg {
     fill: $accent-text-color;
-}
+}*/
 .form__policy-box {
     font-size: 14px;
     line-height: 1.71;
@@ -224,7 +247,7 @@
     border-radius: 2px;
     margin-right: 7px;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color $transdur $transtfunction;
 }
 .form-submit {
     display: block;
