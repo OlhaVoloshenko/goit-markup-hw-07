@@ -24,8 +24,8 @@ body {
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    background-color: var(--background-color);
-    color: var(--page-text-color);
+    background-color: $background-color;
+    color: $page-text-color;
 }
 
 /*Утіліти*/
@@ -55,4 +55,22 @@ body {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
+}
+/*підсвічування активної сторінки*/
+.header-nav--current {
+    color: $accent-text-color;
+}
+.header-nav {
+    &--current::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 32px;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-text-color;
+    border-radius: 2px;
+    }
 }
