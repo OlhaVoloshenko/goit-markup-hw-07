@@ -1,0 +1,141 @@
+/*Portfolio CSS*/
+.portfolio {
+    @extend %section;
+}
+.header {
+    border-bottom: 1px solid $border-portfolio-header;
+}
+
+.portfolio-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+
+.portfolio-menu__item {
+    margin-left: 8px;
+}
+.portfolio-menu__item:first-child {
+    margin-left: 0;
+}
+.portfolio-menu__button {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    padding: 6px 22px;
+    color: $primary-text-color;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: $background-color-portfolio;
+
+    transition-property: color, background-color, box-shadow, border-radius, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.portfolio-menu__button:hover,
+.portfolio-menu__button:focus {
+    color: $background-color;
+    background-color: $accent-text-color;
+/* shadow-middle */
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border-color: $accent-text-color;
+}
+
+/*portfolio container*/
+.header-menu {
+    @extend %container;
+    display: flex;
+    align-items: center;
+}
+.container-item {
+    width: calc((100% - 60px)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.container-item:nth-child(3n) {
+    margin-right: 0;
+}
+.container-item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}
+.container-item .details {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-bottom: 1px solid $border-portfolio-cards;
+    border-left: 1px solid $border-portfolio-cards;
+    border-right: 1px solid $border-portfolio-cards;
+}
+.container-list .container-subtitle {    
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $primary-text-color;
+}
+.container-list .container-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $page-text-color;
+}
+.linke-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.thumb-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+
+    transform: translatey(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+}
+.container-overlay:hover .thumb-block,
+.container-overlay:focus .thumb-block{
+    transform: translateY(0);
+    overflow: visible;
+}
+
+.container-overlay:focus {
+    transform: translateY(0);
+    opacity: 1;
+}
+.thumb-text {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $background-color;
+}
