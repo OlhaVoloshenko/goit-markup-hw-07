@@ -3,6 +3,7 @@
 .header-nav,
 .header-nav__list,
 .header-contacts {
+    @extend %list;
     display: flex;
 }
 .header-nav__logo {
@@ -58,6 +59,24 @@
         margin-left: 50px;
     }
 }
+/*підсвічування активної сторінки*/
+.header-nav--current {
+    color: $accent-text-color;
+}
+.header-nav {
+    &--current::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 32px;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+
+    background-color: $accent-text-color;
+    border-radius: 2px;
+    }
+}
 .header-contacts__icon {
     margin-right: 10px;
 
@@ -107,23 +126,5 @@
     .header-contacts__mail:hover &,
     .header-contacts__mail:focus & {
         fill: $accent-text-color;
-    }
-}
-/*підсвічування активної сторінки*/
-.header-nav--current {
-    color: $accent-text-color;
-}
-.header-nav {
-    &--current::after {
-    content: "";
-    display: block;
-    position: relative;
-    top: 32px;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-
-    background-color: $accent-text-color;
-    border-radius: 2px;
     }
 }

@@ -13,6 +13,7 @@
     color: $primary-text-color;
 }
 .directions-list {
+    @extend %list;
     display: flex;
     align-items: center;
 }
