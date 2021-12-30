@@ -1,6 +1,11 @@
 /*directions*/
 .directions {
     padding-top: 0;
+    @extend %section;
+    
+}
+.directions-box {
+    @extend %container;
 }
 .directions__title {
     margin-bottom: 50px;

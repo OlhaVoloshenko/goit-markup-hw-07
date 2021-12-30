@@ -1,14 +1,15 @@
 /*footer*/
 .footer {
+    @extend %section;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: var(--background-color-main);
+    background-color: $background-color-main;
 }
 .footer-contacts {
+    @extend %container;
     display: flex;
     align-items: baseline;
 }
-
 .contacts-box__logo {
     display: inline-block;
     margin: 0 auto;
@@ -21,10 +22,10 @@
     line-height: 1.19;
 /* identical to box height */
     letter-spacing: 0.03em;
-    color: var(--background-color); 
+    color: $background-color; 
 }
 .contacts-box__web {
-    color: var(--accent-text-color);
+    color: $accent-text-color;
 }
 .contacts__menu {
     display: inline-block;
@@ -38,41 +39,33 @@
     line-height: 1.71;
     letter-spacing: 0.03em;   
 }
-
-.contacts__item:not(:last-child) {
-    margin-bottom: 9px;
+.contacts__item {
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    display: block;
 }
 .contacts__mail,
 .contacts__phone {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: $transcolor;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
 
     color: rgba(255, 255, 255, 0.6);
+
+    &:hover, &:focus {
+        color: $accent-text-color;
+    }
 }
 .contacts__address {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: $transcolor;
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
 
-    color: var(--background-color);
-}
-
-.contacts__address:hover,
-.contacts__address:focus {
-    color: var(--accent-text-color);
-}
-.contacts__mail:hover,
-.contacts__mail:focus {
-    color: var(--accent-text-color);
-}
-
-.contacts__phone:hover,
-.contacts__phone:focus {
-    color: var(--accent-text-color);
-}
-.contacts__item {
-    display: block;
+    color: $background-color;
+    &:hover, &:focus {
+        color: $accent-text-color;
+    }
 }
 /*comming links footer*/
 .comming {
@@ -89,7 +82,7 @@
     text-transform: uppercase;
     text-align: left;
     letter-spacing: 0.03em;
-    color: var(--background-color);
+    color: $background-color;
 }
 .social-box {
     display: flex;
@@ -104,17 +97,17 @@
     background-color: rgba(255, 255, 255, 0.1);
 
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: $transdur;
+    transition-timing-function: $transtfunction;
+
+    &:hover, &:focus {
+        background-color: $accent-text-color;
+        color: $background-color;
+    }
 }
 .social-box__item:not(:last-child) {
     margin-right: 10px;
 }
-.social-box__link:hover,
-.social-box__link:focus {
-    background-color: var(--accent-text-color);
-}
-
 .instagram1,
 .twitter1,
 .facebook1,
@@ -126,11 +119,7 @@
 .social-box__icon {
     width: 20px;
     height: 20px;
-    fill: var(--background-color);
-}
-.social-box__link:hover,
-.social-box__link:focus {
-    color: var(--background-color);
+    fill: $background-color;
 }
 /*subscribe footer*/
 .subscribe {
@@ -143,7 +132,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--background-color);
+    color: $background-color;
 }
 .subscribe__field {
     margin: 0;
@@ -166,11 +155,10 @@
     
     background-color: transparent;
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscribe__input:hover,
-.subscribe__input:focus {
-    border-color: var(--accent-text-color);
+    transition: border-color $transdur $transtfunction;
+    &:hover, &:focus {
+        border-color: $accent-text-color;
+    }
 }
 .subscribe__input::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -191,18 +179,18 @@
     min-width: 200px;
 
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--background-color);
+    color: $background-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
     cursor: pointer;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscribe__submit:hover,
-.subscribe__submit:focus {
-    background-color: var(--accent-text-color);
-    border-color: var(--accent-text-color);
+    transition: background-color $transdur $transtfunction, border-color $transdur $transtfunction;
+
+    &:hover, &:focus {
+        background-color: $accent-text-color;
+        border-color: $accent-text-color;
+    }
 }
 .subscribe_icon {
     margin-left: 10px;

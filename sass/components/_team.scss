@@ -1,7 +1,10 @@
 /*team*/
-
 .team {
+    @extend %section;
     background-color: $background-color-portfolio;
+}
+.team-box {
+    @extend %container;
 }
 .team-box__title {
     text-align: center;

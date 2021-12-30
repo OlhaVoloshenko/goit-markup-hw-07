@@ -1,4 +1,10 @@
 /*feature*/
+.feature {
+    @extend %section;
+}
+.feature__box {
+    @extend %container;
+}
 .feature__list {
     @extend %list;
     display: flex;

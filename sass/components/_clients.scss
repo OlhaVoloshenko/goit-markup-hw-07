@@ -1,6 +1,9 @@
 /*clients*/
+.our-clients {
+    @extend %section;
+}
 .clients {
-    @extend 
+    @extend %container;
 }
 .clients__title {
     margin-bottom: 50px;

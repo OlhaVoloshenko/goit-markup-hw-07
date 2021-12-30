@@ -6,6 +6,9 @@
     @extend %list;
     display: flex;
 }
+.header-menu {
+    @extend %container;
+}
 .header-nav__logo {
     width: 145px;
     margin-left: 0;
