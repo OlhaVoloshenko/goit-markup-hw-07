@@ -3,11 +3,15 @@
 .header-nav,
 .header-nav__list,
 .header-contacts {
-    @extend %list;
+    
     display: flex;
 }
 .header-menu {
     @extend %container;
+}
+.header-nav__list,
+.header-contacts {
+    @extend %list;
 }
 .header-nav__logo {
     width: 145px;
