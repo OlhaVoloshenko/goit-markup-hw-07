@@ -1,2 +1,9 @@
-body {
-border-color: black;}
+@import "./utils/variables";
+@import "./utils/utils";
+@import "./components/page-header";
+@import "./components/main";
+@import "./components/feature";
+@import "./components/directions";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
