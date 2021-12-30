@@ -66,6 +66,7 @@ body {
 }
 
 /*Header*/
+.header-menu,
 .header-nav,
 .header-nav__list,
 .header-contacts {
@@ -100,11 +101,7 @@ body {
   padding-bottom: 32px;
 }
 
-.header-nav__list .header-nav__item + .header-nav__item {
-  margin-left: 50px;
-}
-
-.header-nav__list .header-nav__link {
+.header-nav__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -127,11 +124,6 @@ body {
   padding-bottom: 32px;
 }
 
-.header-contacts .header-contacts__item + .header-contacts__item {
-  margin-left: 50px;
-}
-
-/**/
 .header-contacts__item {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -145,6 +137,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-contacts .header-contacts__item + .header-contacts__item {
+  margin-left: 50px;
+}
+
+.header-nav__list .header-nav__item + .header-nav__item {
+  margin-left: 50px;
 }
 
 .header-contacts__icon {
@@ -216,24 +216,16 @@ body {
   color: #2196F3;
 }
 
-.header-contacts__phone:hover svg,
-.header-contacts__phone:focus svg {
+.header-contacts__phone:hover .header-contacts__icon,
+.header-contacts__phone:focus .header-contacts__icon {
   fill: #2196F3;
 }
 
-.header-contacts__mail:hover svg,
-.header-contacts__mail:focus svg {
+.header-contacts__mail:hover .header-contacts__icon,
+.header-contacts__mail:focus .header-contacts__icon {
   fill: #2196F3;
 }
 
-/*.header-contacts__mail:hover,
-.header-contacts__mail:focus {
-    color: $accent-text-color;
-}
-.header-contacts__phone:hover,
-.header-contacts__phone:focus {
-    color: $accent-text-color;
-}*/
 /*підсвічування активної сторінки*/
 .header-nav--current {
   color: #2196F3;

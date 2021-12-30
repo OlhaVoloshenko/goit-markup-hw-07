@@ -8,11 +8,11 @@
     background-image: 
     linear-gradient(to right, rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
-    url('../images/hero.jpg');
+    url('../../images/hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: var(--background-color-main);
+    background-color: $background-color-main;
 }
 .main__menu {
     display: block;
@@ -20,7 +20,6 @@
     padding-bottom: 200px;
     padding-top: 200px;
 }
-
 .main__title {
     margin-bottom: 30px;
 
@@ -29,7 +28,7 @@
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--background-color);
+    color: $background-color;
 }
 
 .main__button {
@@ -42,8 +41,8 @@
     line-height: 1.87;
     align-items: center;
     letter-spacing: 0.06em;
-    color: var(--background-color);
-    background-color: var(--accent-text-color);
+    color: $background-color;
+    background-color: $accent-text-color;
     
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -81,7 +80,7 @@
 
     width: 528px;
     min-height: 581px;
-    background-color: var(--background-color);
+    background-color: $background-color;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -97,14 +96,14 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
 }
 .form__close-icon {
     position: absolute;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__close:hover .form__close-icon {
-    fill: var(--accent-text-color);
+    fill: $accent-text-color;
 }
 .form__close {
     position: absolute;
@@ -116,7 +115,7 @@
     top: 8px;
     right: 8px;
 
-    background-color: var(--background-color);
+    background-color: $background-color;
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 50%;
 
@@ -135,7 +134,7 @@
     display: block;
     margin-bottom: 10px;
     text-align: left;
-    color: var(--page-text-color);
+    color: $page-text-color;
     
     position: relative;
 }
@@ -150,7 +149,7 @@
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:focus {
-    border: 1px solid var(--accent-text-color);
+    border: 1px solid $accent-text-color;
     border-radius: 4px;
 }
 .form__message {
@@ -178,12 +177,12 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input:focus + svg {
-    fill: var(--accent-text-color);
+    fill: $accent-text-color;
 }
 .form__policy-box {
     font-size: 14px;
     line-height: 1.71;
-    color: var(--page-text-color);
+    color: $page-text-color;
     margin-bottom: 30px;
 
     display: flex;
@@ -194,7 +193,7 @@
     font-size: 14px;
     line-height: 1.71;
     text-decoration-line: underline;
-    color: var(--accent-text-color);
+    color: $accent-text-color;
 }
 .form__policy-checkbox {
     position: absolute;
@@ -207,21 +206,21 @@
     clip: rect(0 0 0 0);
 }
 .form__policy-checkbox:checked + .form__policy-box::before {
-    background-color: var(--accent-text-color);
-    background-image: url(../images/1/icon-check.svg);
+    background-color: $accent-text-color;
+    background-image: url(../../images/1/icon-check.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    border-color: var(--accent-text-color);
+    border-color: $accent-text-color;
 }
 .form__policy-checkbox:focus + .form__policy-box::before {
-    border: 1px solid var(--accent-text-color);
+    border: 1px solid $accent-text-color;
 }
 .form__policy-box::before {
     content: "";
     width: 16px;
     height: 16px;
-    border: 1px solid var(--primary-text-color);
+    border: 1px solid $primary-text-color;
     border-radius: 2px;
     margin-right: 7px;
 
@@ -232,8 +231,8 @@
     padding: 0;
     margin: 0 auto;
     padding: 10px 55px;
-    color: var(--background-color);
-    background-color: var(--accent-text-color);
+    color: $background-color;
+    background-color: $accent-text-color;
 
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -246,6 +245,6 @@
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border-color: var(--accent-text-color);
+    border-color: $accent-text-color;
 }
 /*end form for modal*/
