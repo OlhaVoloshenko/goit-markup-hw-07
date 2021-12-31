@@ -74,38 +74,7 @@
 /*form for modal*/
 .form {
     margin-top: 12px;
-    width: 100%;   
-    
-    $_submit {
-        display: block;
-     
-        color: $background-color;
-        background-color: $accent-text-color;
-    
-        font-family: Roboto, sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        font-style: normal;
-        line-height: 1.88;
-        letter-spacing: 0.06em;
-        text-align: center;
-        
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        border-color: $accent-text-color;
-        cursor: pointer;
-    
-        $:hover {
-            background-color: $color-form-bcgbutton;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
-        }
-    }
-}
-.submit-btn {
-    padding: 0;
-    margin: 0 auto;
-    padding: 10px 55px;
+    width: 100%;    
 }
 .form__field {
     font-size: 12px;
@@ -226,5 +195,30 @@
 
     transition: border-color $transdur $transtfunction;
 }
+.submit-btn {
+    padding: 0;
+    margin: 0 auto;
+    padding: 10px 55px;
+}
+.form_submit {
+    display: block;
+ 
+    color: $background-color;
+    background-color: $accent-text-color;
 
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: $accent-text-color;
+    cursor: pointer;
+}
 /*end form for modal*/
