@@ -2,11 +2,15 @@
 .header {
     border-bottom: 1px solid $border-portfolio-header;
 }
+.header__menu {
+    @extend %container;
+    display: flex;
+}
 .portfolio {
     @extend %section;
 }
 .portfolio-menu {
-    @extend %container;
+
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
