@@ -436,7 +436,7 @@ body {
   color: #FFFFFF;
 }
 
-.subscribe__field {
+.subscribe-field {
   margin: 0;
   padding: 0;
   position: relative;
@@ -447,7 +447,7 @@ body {
   margin-top: 20px;
 }
 
-.subscribe__input {
+.subscribe-field__input {
   width: 358px;
   min-height: 50px;
   margin-right: 12px;
@@ -466,27 +466,27 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe__input:hover, .subscribe__input:focus {
+.subscribe-field__input:hover, .subscribe-field__input:focus {
   border-color: #2196F3;
 }
 
-.subscribe__input::-webkit-input-placeholder {
+.subscribe-field__input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe__input:-ms-input-placeholder {
+.subscribe-field__input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe__input::-ms-input-placeholder {
+.subscribe-field__input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe__input::placeholder {
+.subscribe-field__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe__submit {
+.subscribe-field__submit {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -519,7 +519,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscribe__submit:hover, .subscribe__submit:focus {
+.subscribe-field__submit:hover, .subscribe-field__submit:focus {
   background-color: #2196F3;
   border-color: #2196F3;
 }

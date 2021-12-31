@@ -134,14 +134,14 @@
     text-transform: uppercase;
     color: $background-color;
 }
-.subscribe__field {
+.subscribe-field {
     margin: 0;
     padding: 0;
     position: relative;
     display: flex;
     margin-top: 20px;
 }
-.subscribe__input {
+.subscribe-field__input {
     width: 358px;
     min-height: 50px;
     margin-right: 12px;
@@ -160,10 +160,10 @@
         border-color: $accent-text-color;
     }
 }
-.subscribe__input::placeholder {
+.subscribe-field__input::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
-.subscribe__submit {
+.subscribe-field__submit {
     margin: 0;
     font-size: 16px;
     font-weight: 700;
