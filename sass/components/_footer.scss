@@ -134,12 +134,15 @@
     text-transform: uppercase;
     color: $background-color;
 }
+.form {
+    display: flex;
+}
 .subscribe-field {
     margin: 0;
     padding: 0;
     position: relative;
     display: flex;
-    margin-top: 20px;
+   /* margin-top: 20px;*/
 }
 .subscribe-field__input {
     width: 358px;

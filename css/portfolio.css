@@ -436,6 +436,13 @@ body {
   color: #FFFFFF;
 }
 
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .subscribe-field {
   margin: 0;
   padding: 0;
@@ -444,7 +451,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px;*/
 }
 
 .subscribe-field__input {
