@@ -88,7 +88,9 @@
     display: flex;
     align-items: center;
 }
-
+.social-box__item:not(:last-child) {
+    margin-right: 10px;
+}
 .social-box__link {
     display: block;
     width: 44px;
@@ -105,8 +107,10 @@
         color: $background-color;
     }
 }
-.social-box__item:not(:last-child) {
-    margin-right: 10px;
+.social-box__icon {
+    width: 20px;
+    height: 20px;
+    fill: $background-color;
 }
 .instagram1,
 .twitter1,
@@ -115,11 +119,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.social-box__icon {
-    width: 20px;
-    height: 20px;
-    fill: $background-color;
 }
 /*subscribe footer*/
 .subscribe {

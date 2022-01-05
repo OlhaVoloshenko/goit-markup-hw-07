@@ -1111,6 +1111,10 @@ body {
           align-items: center;
 }
 
+.social-box__item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social-box__link {
   display: block;
   width: 44px;
@@ -1134,8 +1138,10 @@ body {
   color: #FFFFFF;
 }
 
-.social-box__item:not(:last-child) {
-  margin-right: 10px;
+.social-box__icon {
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF;
 }
 
 .instagram1,
@@ -1154,12 +1160,6 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.social-box__icon {
-  width: 20px;
-  height: 20px;
-  fill: #FFFFFF;
 }
 
 /*subscribe footer*/
